@@ -4,17 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class User extends Model
+class Order extends Model
 {
     use HasFactory;
+
+    protected $table = "order_table";
 
     protected $primary_key = "id";
     protected $incrementing = true;
     public $timestamps = true;
-
-    public function orders() : HasMany{
-        return $this->hasMany(Order::class);
-    }
 }
