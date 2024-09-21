@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('product_description');
             $table->integer('quantity');
             $table->double('price');
+            $table->boolean('status')->default(true);
             $table->datetimes();
         });
     }

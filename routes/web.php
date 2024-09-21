@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/{pathMatch}', function() {
+Route::get('/{pathMatch}/', function() {
     return view('index');
 })->where('pathMatch', '.*');
